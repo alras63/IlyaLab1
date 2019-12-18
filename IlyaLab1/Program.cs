@@ -70,7 +70,7 @@ namespace IlyaLab1
             double b = Math.Sqrt(Math.Pow(x1 - 0, 2) + Math.Pow(y1 - 0, 2)); //от A(x1, y1) до (0, 0)
             double c = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)); // от A до B
 
-            if (Math.Pow(a, 2) == Math.Pow(b, 2) + Math.Pow(c, 2) && (!(a==b)))
+            if (Math.Round(Math.Pow(a, 2), 2) == Math.Pow(b, 2) + Math.Pow(c, 2) && (!(a==b)) || Math.Round(Math.Pow(b, 2), 2) == Math.Pow(a, 2) + Math.Pow(c, 2) || Math.Round(Math.Pow(c, 2), 2) == Math.Pow(a, 2) + Math.Pow(b, 2))
             {
                 Console.WriteLine("Образовался прямоугольный треугольник");
             } else
